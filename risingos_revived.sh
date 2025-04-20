@@ -5,20 +5,15 @@ git clone https://github.com/MurtazaKolachi/android_vendor_xiaomi_apollo -b main
 git clone https://github.com/MurtazaKolachi/kernel_xiaomi_apollo -b main kernel/xiaomi/apollo && \
 git clone https://github.com/MurtazaKolachi/hardware_xiaomi -b fifteen hardware/xiaomi && \
 /opt/crave/resync.sh && \
-rm -rf  hardware/qcom-caf/common; \
+rm -rf hardware/qcom-caf/common; \
 git clone https://github.com/MurtazaKolachi/android_hardware_qcom-caf_common -b lineage-22.2 hardware/qcom-caf/common && \
 export BUILD_USERNAME=Murtaza ; \
 export BUILD_HOSTNAME=crave ; \
 export TZ=Asia/Karachi ; \
 source build/envsetup.sh && \
 riseup apollo user && \
-#Build GMS
-rise b > /dev/null &&
-#To get the build:
-mv out/target/product/apollo/Rising*.zip . &&
-#Build Vanilla
-export WITH_GMS=false &&
-rise b > /dev/null &&
-#To get the build:
+rise b > /dev/null && \
+mv out/target/product/apollo/Rising*.zip . && \
+export WITH_GMS=false && \
+rise b > /dev/null && \
 mv out/target/product/apollo/Rising*.zip .
-
