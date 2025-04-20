@@ -10,17 +10,15 @@ rm -rf  hardware/qcom-caf/common; \
 git clone https://github.com/MurtazaKolachi/android_hardware_qcom-caf_common -b lineage-22.2 hardware/qcom-caf/common && \
 export BUILD_USERNAME=Murtaza ; \
 export BUILD_HOSTNAME=crave ; \
-export TZ=Asia/islamabad ; \
+export TZ=Asia/Karachi ; \
 source build/envsetup.sh && \
 riseup apollo user && \
 #Build GMS
-rise b
+rise b; \
 #To get the build:
 mv out/target/product/apollo/Rising*.zip .
-curl -T "Rising*.zip" -u :6604f309-17e3-4a0d-bde2-87ae3a58eff0 https://pixeldrain.com/api/file/
 #Build Vanilla
-export WITH_GMS=false
-rise b
+export WITH_GMS=false; \
+rise b; \
 #To get the build:
 mv out/target/product/apollo/Rising*.zip .
-curl -T "Rising*.zip" -u :6604f309-17e3-4a0d-bde2-87ae3a58eff0 https://pixeldrain.com/api/file/
