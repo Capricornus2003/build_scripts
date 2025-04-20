@@ -1,6 +1,6 @@
 rm -rf .repo/local_manifests ; \
 repo init --depth=1 --no-repo-verify -u https://github.com/RisingOS-Revived/android -b qpr2 -g default,-mips,-darwin,-notdefault && \
-git clone https://github.com/MurtazaKolachi/android_device_xiaomi_apollo_fix -b crdroid device/xiaomi/apollo && \
+git clone https://github.com/MurtazaKolachi/android_device_xiaomi_apollo_fix -b rising device/xiaomi/apollo && \
 git clone https://github.com/MurtazaKolachi/android_vendor_xiaomi_apollo -b main vendor/xiaomi/apollo && \
 git clone https://github.com/MurtazaKolachi/kernel_xiaomi_apollo -b main kernel/xiaomi/apollo && \
 git clone https://github.com/MurtazaKolachi/hardware_xiaomi -b fifteen hardware/xiaomi && \
