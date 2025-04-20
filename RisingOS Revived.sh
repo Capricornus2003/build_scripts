@@ -13,12 +13,12 @@ source build/envsetup.sh && \
 riseup apollo user && \
 #Build GMS
 rise b
-To get the build:
-cd out/target/product/apollo
-curl -T "*.zip" -u :6604f309-17e3-4a0d-bde2-87ae3a58eff0 https://pixeldrain.com/api/file/
+#To get the build:
+mv out/target/product/apollo
+curl -T "Rising*.zip" -u :6604f309-17e3-4a0d-bde2-87ae3a58eff0 https://pixeldrain.com/api/file/
 #Build Vanilla
 export WITH_GMS=false
 rise b
-To get the build:
-cd out/target/product/apollo
-curl -T "*.zip" -u :6604f309-17e3-4a0d-bde2-87ae3a58eff0 https://pixeldrain.com/api/file/
+#To get the build:
+mv out/target/product/apollo
+curl -T "Rising*.zip" -u :6604f309-17e3-4a0d-bde2-87ae3a58eff0 https://pixeldrain.com/api/file/
