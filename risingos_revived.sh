@@ -1,5 +1,4 @@
 rm -rf .repo/local_manifests ; \
-rm -rf {device,vendor,kernel,hardware}/xiaomi ; \
 repo init --depth=1 --no-repo-verify -u https://github.com/RisingOS-Revived/android -b qpr2 -g default,-mips,-darwin,-notdefault && \
 git clone https://github.com/MurtazaKolachi/android_device_xiaomi_apollo_fix -b crdroid device/xiaomi/apollo && \
 git clone https://github.com/MurtazaKolachi/android_vendor_xiaomi_apollo -b main vendor/xiaomi/apollo && \
@@ -14,11 +13,12 @@ export TZ=Asia/Karachi ; \
 source build/envsetup.sh && \
 riseup apollo user && \
 #Build GMS
-rise b; \
+rise b > /dev/null &&
 #To get the build:
-mv out/target/product/apollo/Rising*.zip .
+mv out/target/product/apollo/Rising*.zip . &&
 #Build Vanilla
-export WITH_GMS=false; \
-rise b; \
+export WITH_GMS=false &&
+rise b > /dev/null &&
 #To get the build:
 mv out/target/product/apollo/Rising*.zip .
+
