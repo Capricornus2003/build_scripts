@@ -14,11 +14,11 @@ breakfast jason userdebug && \
 #Build GMS
 mka bacon
 #To get the build:
-mv out/target/product/apollo/crDroid*.zip .
+mv out/target/product/jason/crDroid*.zip .
 curl -T "crDroid*.zip" -u :9db1fe94-0290-4a17-b317-b79c3957ac25 https://pixeldrain.com/api/file/
 #Build Vanilla
 export WITH_GMS=true
 mka bacon
 #To get the build:
-mv out/target/product/apollo/crDroid*.zip .
+mv out/target/product/jason/crDroid*.zip .
 curl -T "crDroid*.zip" -u :59770441-c926-43c0-b338-c8239eea4fe2 https://pixeldrain.com/api/file/
